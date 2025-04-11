@@ -1,0 +1,66 @@
+﻿<Window x:Class="littlescholarsdbms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:littlescholarsdbms"
+        mc:Ignorable="d"
+        Title="Little Scholars School System" Height="600" Width="300"
+        Background="White" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="1.144,0.656">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="109*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Top-left curved shape -->
+
+        <!-- Center content -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,298,0,0" Grid.ColumnSpan="2">
+            <!-- Placeholder for logo (use Image control if you have the logo image) -->
+
+            <!-- Title -->
+            <!-- Placeholder for logo (use Image control if you have the logo image) -->
+
+            <!-- Title -->
+            <TextBlock Text="Little Scholars School System" FontWeight="Bold" Foreground="#0D47A1" FontSize="14" TextAlignment="Center" Margin="0,10,0,0"/>
+            <TextBlock Text="FEROZA" FontWeight="Bold" Foreground="#2AC1A7" FontSize="14" TextAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Bottom curved footer -->
+        <Path Fill="#0D47A1" Stretch="Fill" VerticalAlignment="Bottom"
+          Height="100"
+          Data="M 0,100 A 150,100 0 0 0 300,100 L 300,0 L 0,0 Z" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5"/>
+
+        <!-- Footer text -->
+        <TextBlock Text="Education is the key to Success" Foreground="White" FontSize="10"
+               VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="6,0,0,37" Grid.Column="1" RenderTransformOrigin="0.506,-1.272"/>
+        <Canvas Width="150" Height="150" Margin="75,160,75,274" Grid.ColumnSpan="2">
+
+            <!-- Shield background -->
+            <Path Fill="#0D47A1" Data="M75,10 L130,40 L130,100 Q75,140 20,100 L20,40 Z" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <!-- Open Book -->
+            <Path Fill="#2AC1A7" Data="M40,85 Q75,70 110,85 L110,100 Q75,83 40,100 Z"/>
+
+            <!-- Left Book Cover -->
+            <Rectangle Width="6" Height="35" Fill="White" Canvas.Left="35" Canvas.Top="75" RadiusX="2" RadiusY="2"/>
+
+            <!-- Right Book Cover -->
+            <Rectangle Width="6" Height="35" Fill="White" Canvas.Left="109" Canvas.Top="75" RadiusX="2" RadiusY="2"/>
+
+            <!-- Central pencil (symbolizing student/knowledge) -->
+            <Polygon Fill="White" Points="70,50 80,50 75,85"/>
+            <Ellipse Width="6" Height="6" Fill="Gold" Canvas.Left="72" Canvas.Top="45"/>
+
+            <!-- School building roof -->
+            <Polygon Fill="#2AC1A7" Points="55,40 95,40 75,25"/>
+
+            <!-- Star above roof -->
+            <Polygon Fill="#FFD700" Points="75,10 78,18 87,18 80,23 83,32 75,26 67,32 70,23 63,18 72,18"/>
+
+        </Canvas>
+
+
+    </Grid>
+</Window>
