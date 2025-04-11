@@ -1,0 +1,57 @@
+﻿<Window x:Class="littlescholarsdbms.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:littlescholarsdbms"
+        mc:Ignorable="d"
+        Title="Login" Height="500" Width="300"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+    <Grid>
+        <!-- Header with Logo and Title -->
+        <Border Background="#2AC1A7" Height="180" VerticalAlignment="Top" CornerRadius="0,0,60,60">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!-- Logo Canvas -->
+                <Canvas Width="80" Height="80" Margin="0,10,0,0">
+                    <!-- Shield background -->
+                    <Path Fill="#0D47A1" Data="M40,0 L75,20 L75,60 Q40,90 5,60 L5,20 Z"/>
+
+                    <!-- Book -->
+                    <Path Fill="#2AC1A7" Data="M15,55 Q40,45 65,55 L65,65 Q40,50 15,65 Z"/>
+                    <Rectangle Width="4" Height="25" Fill="White" Canvas.Left="12" Canvas.Top="45" RadiusX="1" RadiusY="1"/>
+                    <Rectangle Width="4" Height="25" Fill="White" Canvas.Left="64" Canvas.Top="45" RadiusX="1" RadiusY="1"/>
+
+                    <!-- Pencil -->
+                    <Polygon Fill="White" Points="35,30 45,30 40,55"/>
+                    <Ellipse Width="4" Height="4" Fill="Gold" Canvas.Left="38" Canvas.Top="26"/>
+
+                    <!-- Star -->
+                    <Polygon Fill="#FFD700" Points="40,5 42,11 48,11 43,15 45,22 40,18 35,22 37,15 32,11 38,11"/>
+                </Canvas>
+
+                <TextBlock Text="Little Scholars School System" FontWeight="Bold" Foreground="White" FontSize="16" TextAlignment="Center"/>
+                <TextBlock Text="Feroza" FontWeight="Bold" Foreground="White" FontSize="14" TextAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Login Form -->
+        <StackPanel Margin="30,200,30,0" VerticalAlignment="Top" >
+
+            <TextBlock Text="Username" Foreground="#0D47A1" FontWeight="Bold"/>
+            <TextBox x:Name="UsernameBox" Height="25" Margin="0,5,0,15" BorderBrush="#0D47A1" BorderThickness="1" />
+
+            <TextBlock Text="Password" Foreground="#0D47A1" FontWeight="Bold"/>
+            <PasswordBox x:Name="PasswordBox" Height="25" Margin="0,5,0,15" BorderBrush="#0D47A1" BorderThickness="1"/>
+
+            <Button Content="Login" Height="40" Background="#0D47A1" Foreground="White"
+                    FontWeight="Bold" BorderBrush="Transparent" Click="Login_Click"
+                    Cursor="Hand" Margin="0,10,0,0" />
+
+            <TextBlock Text="Forgot Password?" Foreground="#2AC1A7" FontSize="12"
+                       Margin="0,10,0,0" HorizontalAlignment="Center" Cursor="Hand"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

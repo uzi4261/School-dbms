@@ -1,0 +1,135 @@
+﻿<Window x:Class="littlescholarsdbms.AdminDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:littlescholarsdbms"
+        mc:Ignorable="d"
+        Title="Admin Dashboard" Height="600" Width="300"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="White">
+    <Window.Resources>
+        <Style x:Key="TileButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#EAF7FD"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <ScrollViewer>
+        <StackPanel Margin="10">
+
+            <!-- Header with Logo and Title -->
+            <Border Background="#2AC1A7" Height="180" VerticalAlignment="Top" CornerRadius="0,0,60,60">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <!-- Logo Canvas -->
+                    <Canvas Width="80" Height="80" Margin="0,10,0,0">
+                        <!-- Shield background -->
+                        <Path Fill="#0D47A1" Data="M40,0 L75,20 L75,60 Q40,90 5,60 L5,20 Z"/>
+
+                        <!-- Book -->
+                        <Path Fill="#2AC1A7" Data="M15,55 Q40,45 65,55 L65,65 Q40,50 15,65 Z"/>
+                        <Rectangle Width="4" Height="25" Fill="White" Canvas.Left="12" Canvas.Top="45" RadiusX="1" RadiusY="1"/>
+                        <Rectangle Width="4" Height="25" Fill="White" Canvas.Left="64" Canvas.Top="45" RadiusX="1" RadiusY="1"/>
+
+                        <!-- Pencil -->
+                        <Polygon Fill="White" Points="35,30 45,30 40,55"/>
+                        <Ellipse Width="4" Height="4" Fill="Gold" Canvas.Left="38" Canvas.Top="26"/>
+
+                        <!-- Star -->
+                        <Polygon Fill="#FFD700" Points="40,5 42,11 48,11 43,15 45,22 40,18 35,22 37,15 32,11 38,11"/>
+                    </Canvas>
+
+                    <TextBlock Text="Little Scholars School System" FontWeight="Bold" Foreground="White" FontSize="16" TextAlignment="Center"/>
+                    <TextBlock Text="Feroza" FontWeight="Bold" Foreground="White" FontSize="14" TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Title -->
+            <TextBlock Text="Admin Dashboard" FontSize="18" FontWeight="Bold" 
+                       Foreground="#0D47A1" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Tiles as Buttons -->
+            <UniformGrid Columns="3" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+                <!-- Template Button -->
+                <Button Style="{StaticResource TileButtonStyle}" Click="ManageUsers_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="👤" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Users" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Timetable_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="📅" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Timetable" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Reports_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="📊" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Reports" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Attendance_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="📋" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Attendance" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Homework_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="🏫" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Homework" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Result_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="🅰️" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Result" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="ExamRoutine_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="🗓️" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Exam Routine" FontSize="12" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Solution_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="💡" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Solution" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource TileButtonStyle}" Click="Notice_Click">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock FontSize="26" Text="📣" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Notice" FontSize="12" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+            </UniformGrid>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
