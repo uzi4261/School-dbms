@@ -28,7 +28,6 @@
     </Window.Resources>
 
 
-    <ScrollViewer>
         <StackPanel Margin="10">
 
             <!-- Header with Logo and Title -->
@@ -131,5 +130,4 @@
 
             </UniformGrid>
         </StackPanel>
-    </ScrollViewer>
 </Window>
